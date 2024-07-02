@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>番茄鐘</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>番茄鐘</h1>
+        <div id="timer">25:00</div>
+        <div id="status">準備開始</div>
+        <div id="time-settings">
+            <div class="time-input">
+                <label for="workTime">工作時間 (分鐘):</label>
+                <input type="number" id="workTime" value="25" min="1">
+            </div>
+            <div class="time-input">
+                <label for="breakTime">休息時間 (分鐘):</label>
+                <input type="number" id="breakTime" value="5" min="1">
+            </div>
+        </div>
+        <div id="currentlyPlaying"></div>
+        <div class="music-settings">
+            <div class="music-input">
+                <label for="youtubeLink">YouTube 音樂連結:</label>
+                <input type="text" id="youtubeLink" placeholder="輸入 YouTube 影片連結">
+            </div>
+            <div class="volume-control">
+                <label for="volume">音量:</label>
+                <input type="range" id="volume" min="0" max="100" value="50">
+            </div>
+        </div>
+        <div class="button-group">
+            <button id="startButton">開始</button>
+            <button id="stopButton">停止</button>
+            <button id="resetButton">重置</button>
+        </div>
+    </div>
+    <div id="player"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>

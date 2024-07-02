@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+#timer {
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: #4a4a4a;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+#time-settings, .music-settings {
+    margin-bottom: 1.5rem;
+}
+
+.time-input, .music-input, .volume-control {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+input[type="number"], input[type="text"], input[type="range"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    width: 118px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+button {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#startButton.hidden {
+    display: none;
+    width: 0;
+    flex: 0;
+}
+
+#startButton {
+    background-color: #2196F3;
+    color: white;
+}
+
+#stopButton {
+    background-color: #FFC107;
+    color: black;
+}
+
+#resetButton {
+    background-color: #F44336;
+    color: white;
+}
+
+#startButton:hover {
+    background-color: #1976D2;
+}
+
+#stopButton:hover {
+    background-color: #FFA000;
+}
+
+#resetButton:hover {
+    background-color: #D32F2F;
+}
+
+#currentlyPlaying {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+#player {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #timer {
+        font-size: 3rem;
+    }
+
+    #status {
+        font-size: 1rem;
+    }
+
+    button {
+        min-width: 80px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
