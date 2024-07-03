@@ -229,7 +229,7 @@ function validateInputs() {
     const workTimeValue = parseInt(document.getElementById('workTime').value);
     const breakTimeValue = parseInt(document.getElementById('breakTime').value);
     // 檢查是否為有效的正整數
-    if (isNaN(workTimeValue) || isNaN(breakTimeValue) || workTimeValue <= 0 || breakTimeValue <= 0) {
+    if (isNaN(workTimeValue) || isNaN(breakTimeValue) || workTimeValue < 0 || breakTimeValue < 0) {
         alert('請輸入有效的正整數作為工作時間和休息時間！'); // 如果無效，顯示警告
         return false;
     }
